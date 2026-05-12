@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Free Creator Tools - YouTube, Instagram, Facebook Tools</title>
+  <meta name="description" content="Free online creator tools: YouTube thumbnail downloader, tags generator, description generator, image resize, photo to PDF, text tools and more." />
+  <meta name="keywords" content="YouTube tools, free tools, thumbnail downloader, tags generator, image resize, photo to pdf, creator tools" />
+  <meta name="author" content="Creator Tools" />
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#101828;
+      --muted:#667085;
+      --primary:#ff0033;
+      --primary2:#7c3aed;
+      --border:#e4e7ec;
+      --success:#12b76a;
+      --warning:#f79009;
+      --shadow:0 10px 30px rgba(16,24,40,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body{background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px}
+    .logo-badge{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:var(--shadow)}
+    .nav-links{display:flex;align-items:center;gap:20px;font-weight:650;color:#344054}
+    .nav-links a:hover{color:var(--primary)}
+    .btn{border:0;cursor:pointer;border-radius:999px;padding:11px 18px;font-weight:800;background:var(--text);color:#fff;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+    .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary2))}
+    .btn-light{background:#fff;color:var(--text);border:1px solid var(--border)}
+    .mobile-menu{display:none}
+    .hero{padding:70px 0 42px;background:radial-gradient(circle at top left,rgba(255,0,51,.14),transparent 34%),radial-gradient(circle at top right,rgba(124,58,237,.14),transparent 32%)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+    .pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:#fff;border-radius:999px;padding:8px 13px;font-weight:750;color:#344054;box-shadow:0 4px 14px rgba(16,24,40,.04)}
+    h1{font-size:clamp(34px,5vw,62px);line-height:1.06;margin:18px 0;font-weight:950;letter-spacing:-1.5px}
+    .gradient-text{background:linear-gradient(135deg,var(--primary),var(--primary2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:18px;color:var(--muted);max-width:660px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+    .stat{background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:0 4px 18px rgba(16,24,40,.04)}
+    .stat strong{display:block;font-size:24px}.stat span{color:var(--muted);font-weight:650;font-size:14px}
+    .hero-card{background:rgba(255,255,255,.78);border:1px solid var(--border);border-radius:28px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(14px)}
+    .search-box{display:flex;gap:10px;margin-bottom:14px}
+    input,textarea,select{width:100%;border:1px solid var(--border);border-radius:14px;padding:12px 14px;font-size:15px;outline:none;background:#fff;color:var(--text)}
+    textarea{min-height:110px;resize:vertical}
+    input:focus,textarea:focus,select:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(255,0,51,.08)}
+    .quick-list{display:grid;gap:10px}
+    .quick-item{display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--border);border-radius:16px;padding:14px}
+    .quick-item b{font-size:15px}.quick-item span{font-size:13px;color:var(--muted)}
+    section{padding:56px 0}.section-head{text-align:center;margin-bottom:28px}.section-head h2{font-size:clamp(28px,4vw,42px);line-height:1.15}.section-head p{color:var(--muted);margin-top:8px}
+    .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .tool-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:0 4px 20px rgba(16,24,40,.04);transition:.2s;display:flex;flex-direction:column;gap:12px}
+    .tool-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(255,0,51,.25)}
+    .icon{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,rgba(255,0,51,.12),rgba(124,58,237,.12));display:grid;place-items:center;font-size:23px}
+    .tool-card h3{font-size:19px}.tool-card p{color:var(--muted);font-size:14px;min-height:44px}.tool-card .open-tool{margin-top:auto;width:100%}
+    .modal{position:fixed;inset:0;background:rgba(16,24,40,.62);display:none;align-items:center;justify-content:center;padding:18px;z-index:100}
+    .modal.active{display:flex}.modal-box{width:min(780px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:24px;box-shadow:0 24px 70px rgba(0,0,0,.22);border:1px solid var(--border)}
+    .modal-head{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--border);position:sticky;top:0;background:#fff;z-index:1}.modal-head h3{font-size:22px}.close{background:#f2f4f7;border:0;border-radius:12px;width:40px;height:40px;font-size:22px;cursor:pointer}
+    .modal-body{padding:20px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.result{background:#f9fafb;border:1px dashed #d0d5dd;border-radius:16px;padding:14px;margin-top:14px;white-space:pre-wrap;word-break:break-word}.thumbs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}.thumbs img{width:100%;border-radius:14px;border:1px solid var(--border)}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.feature{background:#fff;border:1px solid var(--border);border-radius:18px;padding:18px;text-align:center}.feature div{font-size:30px}.feature p{color:var(--muted);font-size:14px;margin-top:6px}
+    .ad-box{border:2px dashed #d0d5dd;background:#fff;border-radius:18px;padding:24px;text-align:center;color:var(--muted);font-weight:750;margin:22px 0}
+    footer{background:#101828;color:#fff;padding:42px 0;margin-top:30px}footer .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:24px}footer p,footer a{color:#d0d5dd}footer h4{margin-bottom:12px}.footer-links{display:grid;gap:8px}.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:24px;padding-top:18px;color:#98a2b3;text-align:center}
+    .page{display:none}.page.active{display:block}.legal{background:#fff;border:1px solid var(--border);border-radius:22px;padding:24px;box-shadow:0 4px 20px rgba(16,24,40,.04)}.legal h2{margin-bottom:10px}.legal h3{margin-top:18px}.legal p{color:#475467;margin:8px 0}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr}.tools-grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}footer .footer-grid{grid-template-columns:1fr}.nav-links{display:none}.mobile-menu{display:inline-flex}.stats{grid-template-columns:1fr 1fr 1fr}}
+    @media(max-width:620px){.tools-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.thumbs{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.hero{padding-top:44px}.search-box{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#home" class="logo" onclick="showPage('home')"><span class="logo-badge">YT</span><span>CreatorTools</span></a>
+      <nav class="nav-links">
+        <a href="#tools" onclick="showPage('home')">Tools</a>
+        <a href="#features" onclick="showPage('home')">Features</a>
+        <a href="#about" onclick="showPage('about')">About</a>
+        <a href="#contact" onclick="showPage('contact')">Contact</a>
+        <a href="#privacy" onclick="showPage('privacy')">Privacy</a>
+      </nav>
+      <button class="btn btn-primary" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'});showPage('home')">Start Free</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="homePage" class="page active">
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <span class="pill">🚀 100% Free Browser Based Tools</span>
+            <h1>All Free <span class="gradient-text">Creator Tools</span> in One Website</h1>
+            <p>YouTube, Instagram, Facebook aur daily online kaam ke liye fast tools. Koi login nahi, koi install nahi — sab kuch browser me.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">Explore Tools</button>
+              <button class="btn btn-light" onclick="openTool('youtubeTags')">Generate Tags</button>
+            </div>
+            <div class="stats">
+              <div class="stat"><strong>20+</strong><span>Free Tools</span></div>
+              <div class="stat"><strong>0₹</strong><span>Cost</span></div>
+              <div class="stat"><strong>Fast</strong><span>In Browser</span></div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="search-box">
+              <input id="toolSearch" type="search" placeholder="Search tools..." oninput="filterTools()" />
+              <button class="btn btn-primary" onclick="filterTools()">Search</button>
+            </div>
+            <div class="quick-list">
+              <div class="quick-item"><div><b>YouTube Thumbnail</b><br><span>Video thumbnail download</span></div><button class="btn btn-light" onclick="openTool('thumbnail')">Open</button></div>
+              <div class="quick-item"><div><b>Tags Generator</b><br><span>SEO tags for videos</span></div><button class="btn btn-light" onclick="openTool('youtubeTags')">Open</button></div>
+              <div class="quick-item"><div><b>Image Resize</b><br><span>Resize image online</span></div><button class="btn btn-light" onclick="openTool('imageResize')">Open</button></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tools">
+        <div class="container">
+          <div class="section-head">
+            <h2>Popular Free Tools</h2>
+            <p>Click karke tool open karein. Aap apne hisab se tools add/edit kar sakte hain.</p>
+          </div>
+          <div class="ad-box">AdSense Banner Space 728x90</div>
+          <div class="tools-grid" id="toolsGrid"></div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="container">
+          <div class="section-head"><h2>Why Use This Website?</h2><p>Fast, simple aur mobile friendly tools platform.</p></div>
+          <div class="features">
+            <div class="feature"><div>⚡</div><h3>Fast</h3><p>Most tools browser me turant run hote hain.</p></div>
+            <div class="feature"><div>🔒</div><h3>Private</h3><p>Files mostly aapke browser me process hoti hain.</p></div>
+            <div class="feature"><div>📱</div><h3>Responsive</h3><p>Mobile, tablet aur desktop par perfect.</p></div>
+            <div class="feature"><div>💰</div><h3>Free</h3><p>Basic creator tools bilkul free.</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="aboutPage" class="page"><section><div class="container legal"><h2>About Us</h2><p>CreatorTools ek free online tools website hai jahan creators ke liye YouTube, Instagram, Facebook aur image/document tools available hain.</p><p>Hamari koshish hai ki har creator ko simple aur fast tools ek hi jagah mil sakein.</p></div></section></div>
+    <div id="contactPage" class="page"><section><div class="container legal"><h2>Contact Us</h2><p>Email: yourmail@example.com</p><p>Business inquiry, feedback ya tool request ke liye contact karein.</p><div class="form-row"><input placeholder="Your Name"><input placeholder="Your Email"></div><textarea placeholder="Your Message"></textarea><button class="btn btn-primary" style="margin-top:12px" onclick="alert('Demo form. Backend connect karna hoga.')">Send Message</button></div></section></div>
+    <div id="privacyPage" class="page"><section><div class="container legal"><h2>Privacy Policy</h2><p>Hum users ki privacy ka dhyan rakhte hain. Is demo website me koi personal data server par store nahi hota.</p><h3>Cookies</h3><p>AdSense/Analytics add karne par third-party cookies use ho sakti hain.</p><h3>Files</h3><p>Image resize aur PDF tools browser me process hote hain. Production me server upload use karne par policy update karein.</p></div></section></div>
+    <div id="termsPage" class="page"><section><div class="container legal"><h2>Terms & Conditions</h2><p>Website tools educational aur productivity purpose ke liye hain. User apne content ke liye khud responsible hoga.</p></div></section></div>
+    <div id="disclaimerPage" class="page"><section><div class="container legal"><h2>Disclaimer</h2><p>Yeh website kisi official YouTube, Instagram ya Facebook service se affiliated nahi hai. Tools public formats aur browser functions par based hain.</p></div></section></div>
+  </main>
+
+  <div class="modal" id="toolModal">
+    <div class="modal-box">
+      <div class="modal-head"><h3 id="modalTitle">Tool</h3><button class="close" onclick="closeTool()">×</button></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><div class="logo"><span class="logo-badge">YT</span><span>CreatorTools</span></div><p style="margin-top:12px">Free online tools for creators, students and digital workers.</p></div>
+      <div><h4>Pages</h4><div class="footer-links"><a href="#about" onclick="showPage('about')">About</a><a href="#contact" onclick="showPage('contact')">Contact</a><a href="#privacy" onclick="showPage('privacy')">Privacy Policy</a></div></div>
+      <div><h4>Legal</h4><div class="footer-links"><a href="#terms" onclick="showPage('terms')">Terms</a><a href="#disclaimer" onclick="showPage('disclaimer')">Disclaimer</a></div></div>
+    </div>
+    <div class="container copy">© <span id="year"></span> CreatorTools. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const tools = [
+      {id:'thumbnail', icon:'🖼️', title:'YouTube Thumbnail Downloader', desc:'YouTube video URL se HD thumbnail links generate karein.'},
+      {id:'youtubeTags', icon:'🏷️', title:'YouTube Tags Generator', desc:'Topic se SEO friendly tags generate karein.'},
+      {id:'description', icon:'📝', title:'YouTube Description Generator', desc:'Video topic ke liye ready description banayein.'},
+      {id:'titleGen', icon:'🔥', title:'Viral Title Generator', desc:'Hindi/English viral titles create karein.'},
+      {id:'hashtag', icon:'#️⃣', title:'Hashtag Generator', desc:'Social media ke liye hashtags banayein.'},
+      {id:'imageResize', icon:'📐', title:'Image Resize Tool', desc:'Image ko custom width/height me resize karein.'},
+      {id:'photoPdf', icon:'📄', title:'Photo to PDF', desc:'Multiple images ko ek PDF me convert karein.'},
+      {id:'wordCounter', icon:'🔢', title:'Word Counter', desc:'Words, characters aur reading time count karein.'},
+      {id:'caseConverter', icon:'Aa', title:'Case Converter', desc:'Text ko uppercase, lowercase, title case me badlein.'},
+      {id:'qr', icon:'▦', title:'QR Code Generator', desc:'Text ya link ka QR code banayein.'},
+      {id:'password', icon:'🔐', title:'Password Generator', desc:'Strong password generate karein.'},
+      {id:'multiLinks', icon:'🔗', title:'Multi Link Opener', desc:'Multiple URLs ko ek click me open karein.'},
+      {id:'ytAudit', icon:'📊', title:'YouTube Audit Checklist', desc:'Channel growth ke liye checklist generate karein.'},
+      {id:'instaCaption', icon:'📸', title:'Instagram Caption Generator', desc:'Reels/post ke liye captions banayein.'},
+      {id:'fbPost', icon:'📣', title:'Facebook Viral Post Writer', desc:'Engaging FB post caption create karein.'}
+    ];
+
+    const grid = document.getElementById('toolsGrid');
+    const year = document.getElementById('year'); year.textContent = new Date().getFullYear();
+
+    function renderTools(list=tools){
+      grid.innerHTML = list.map(t => `<div class="tool-card" data-title="${t.title.toLowerCase()}"><div class="icon">${t.icon}</div><h3>${t.title}</h3><p>${t.desc}</p><button class="btn btn-primary open-tool" onclick="openTool('${t.id}')">Open Tool</button></div>`).join('');
+    }
+    renderTools();
+
+    function filterTools(){
+      const q = document.getElementById('toolSearch').value.toLowerCase().trim();
+      renderTools(tools.filter(t => t.title.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)));
+    }
+
+    function showPage(page){
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      const map={home:'homePage',about:'aboutPage',contact:'contactPage',privacy:'privacyPage',terms:'termsPage',disclaimer:'disclaimerPage'};
+      document.getElementById(map[page]||'homePage').classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    function openTool(id){
+      const t = tools.find(x=>x.id===id) || {title:'Tool'};
+      document.getElementById('modalTitle').textContent = t.title;
+      document.getElementById('modalBody').innerHTML = getToolHTML(id);
+      document.getElementById('toolModal').classList.add('active');
+    }
+    function closeTool(){document.getElementById('toolModal').classList.remove('active')}
+    window.addEventListener('click', e=>{if(e.target.id==='toolModal') closeTool()});
+
+    function getToolHTML(id){
+      if(id==='thumbnail') return `<label>YouTube Video URL</label><input id="ytUrl" placeholder="https://www.youtube.com/watch?v=VIDEO_ID"><button class="btn btn-primary" style="margin-top:12px" onclick="generateThumbs()">Get Thumbnails</button><div id="thumbResult"></div>`;
+      if(id==='youtubeTags') return `<label>Video Topic</label><input id="tagTopic" placeholder="Example: mobile se youtube video kaise banaye"><button class="btn btn-primary" style="margin-top:12px" onclick="genTags()">Generate Tags</button><div id="tagResult" class="result"></div>`;
+      if(id==='description') return `<label>Video Topic</label><input id="descTopic" placeholder="Video topic"><button class="btn btn-primary" style="margin-top:12px" onclick="genDescription()">Generate Description</button><div id="descResult" class="result"></div>`;
+      if(id==='titleGen') return `<label>Topic</label><input id="titleTopic" placeholder="Topic likhein"><button class="btn btn-primary" style="margin-top:12px" onclick="genTitles()">Generate Titles</button><div id="titleResult" class="result"></div>`;
+      if(id==='hashtag') return `<label>Keyword</label><input id="hashTopic" placeholder="Keyword"><button class="btn btn-primary" style="margin-top:12px" onclick="genHashtags()">Generate Hashtags</button><div id="hashResult" class="result"></div>`;
+      if(id==='imageResize') return `<label>Select Image</label><input type="file" id="resizeFile" accept="image/*"><div class="form-row"><input id="resizeW" type="number" placeholder="Width px"><input id="resizeH" type="number" placeholder="Height px"></div><button class="btn btn-primary" onclick="resizeImage()">Resize Image</button><div id="resizeResult"></div>`;
+      if(id==='photoPdf') return `<label>Select Images</label><input type="file" id="pdfFiles" accept="image/*" multiple><button class="btn btn-primary" style="margin-top:12px" onclick="alert('PDF export ke liye jsPDF library add karein. Demo me print option use karein.');window.print()">Create PDF / Print</button><p class="result">Production ke liye jsPDF CDN add karke real PDF download enable karein.</p>`;
+      if(id==='wordCounter') return `<textarea id="wcText" placeholder="Text paste karein" oninput="wordCount()"></textarea><div id="wcResult" class="result">Words: 0\nCharacters: 0</div>`;
+      if(id==='caseConverter') return `<textarea id="caseText" placeholder="Text paste karein"></textarea><div class="hero-actions"><button class="btn btn-primary" onclick="convertCase('upper')">UPPER</button><button class="btn btn-primary" onclick="convertCase('lower')">lower</button><button class="btn btn-primary" onclick="convertCase('title')">Title Case</button></div>`;
+      if(id==='qr') return `<label>Text / URL</label><input id="qrText" placeholder="Enter text or link"><button class="btn btn-primary" style="margin-top:12px" onclick="genQR()">Generate QR</button><div id="qrResult" style="margin-top:14px"></div>`;
+      if(id==='password') return `<div class="form-row"><input id="passLen" type="number" value="12" min="6" max="40"><select id="passType"><option value="all">Letters + Numbers + Symbols</option><option value="simple">Letters + Numbers</option></select></div><button class="btn btn-primary" onclick="genPassword()">Generate Password</button><div id="passResult" class="result"></div>`;
+      if(id==='multiLinks') return `<textarea id="linksText" placeholder="Har line me ek URL"></textarea><button class="btn btn-primary" onclick="openLinks()">Open All Links</button>`;
+      if(id==='ytAudit') return `<label>Channel Niche</label><input id="auditNiche" placeholder="Example: education, news, tech"><button class="btn btn-primary" style="margin-top:12px" onclick="genAudit()">Generate Checklist</button><div id="auditResult" class="result"></div>`;
+      if(id==='instaCaption') return `<label>Post/Reel Topic</label><input id="capTopic" placeholder="Topic"><button class="btn btn-primary" style="margin-top:12px" onclick="genCaption()">Generate Caption</button><div id="capResult" class="result"></div>`;
+      if(id==='fbPost') return `<label>Post Topic</label><input id="fbTopic" placeholder="Topic"><button class="btn btn-primary" style="margin-top:12px" onclick="genFBPost()">Generate Post</button><div id="fbResult" class="result"></div>`;
+      return `<p class="result">Tool coming soon.</p>`;
+    }
+
+    function extractYouTubeID(url){
+      const patterns=[/v=([^&]+)/,/youtu\.be\/([^?&]+)/,/shorts\/([^?&]+)/,/embed\/([^?&]+)/];
+      for(const p of patterns){const m=url.match(p); if(m) return m[1];}
+      return url.trim().length===11 ? url.trim() : '';
+    }
+    function generateThumbs(){
+      const id=extractYouTubeID(document.getElementById('ytUrl').value);
+      const out=document.getElementById('thumbResult');
+      if(!id){out.innerHTML='<div class="result">Valid YouTube URL ya Video ID enter karein.</div>';return}
+      const sizes=['maxresdefault','hqdefault','mqdefault','sddefault'];
+      out.innerHTML='<div class="thumbs">'+sizes.map(s=>`<div><img src="https://img.youtube.com/vi/${id}/${s}.jpg"><a class="btn btn-light" style="width:100%;margin-top:8px" href="https://img.youtube.com/vi/${id}/${s}.jpg" download>Download ${s}</a></div>`).join('')+'</div>';
+    }
+    function genTags(){const q=val('tagTopic'); const base=[q,`${q} hindi`,`${q} tutorial`,`${q} tips`,`${q} 2026`,`${q} kaise kare`,`${q} full guide`,`${q} viral`,`${q} shorts`,`${q} youtube`]; text('tagResult',base.filter(Boolean).join(', '));}
+    function genDescription(){const q=val('descTopic'); text('descResult',`🔥 ${q}\n\nIs video me hum ${q} ke baare me simple language me complete information denge. Video ko end tak dekhein aur channel ko subscribe karein.\n\nTopics Covered:\n1. ${q} kya hai\n2. Important points\n3. Best tips\n\n#${slug(q)} #Hindi #CreatorTools`)}
+    function genTitles(){const q=val('titleTopic'); text('titleResult',[`🔥 ${q} - पूरी जानकारी हिंदी में`,`${q} करने का सबसे आसान तरीका!`,`${q}: ये गलती मत करना`,`${q} 2026 Latest Update`,`${q} से जुड़ी बड़ी खबर!`].join('\n'));}
+    function genHashtags(){const q=slug(val('hashTopic')); text('hashResult',`#${q} #viral #trending #hindi #youtube #shorts #facebook #instagram #creator #latest`)}
+    function wordCount(){const s=val('wcText'); const words=s.trim()?s.trim().split(/\s+/).length:0; text('wcResult',`Words: ${words}\nCharacters: ${s.length}\nReading Time: ${Math.max(1,Math.ceil(words/200))} min`)}
+    function convertCase(type){const el=document.getElementById('caseText'); let s=el.value; if(type==='upper')s=s.toUpperCase(); if(type==='lower')s=s.toLowerCase(); if(type==='title')s=s.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase()); el.value=s;}
+    function genQR(){const q=encodeURIComponent(val('qrText')); document.getElementById('qrResult').innerHTML=q?`<img style="border:1px solid var(--border);border-radius:16px" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${q}">`: '<div class="result">Text enter karein.</div>';}
+    function genPassword(){const len=+val('passLen')||12; const type=val('passType'); const chars=type==='simple'?'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789':'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*'; let p=''; for(let i=0;i<len;i++)p+=chars[Math.floor(Math.random()*chars.length)]; text('passResult',p)}
+    function openLinks(){val('linksText').split('\n').map(x=>x.trim()).filter(Boolean).forEach(u=>window.open(u.startsWith('http')?u:'https://'+u,'_blank'))}
+    function genAudit(){const q=val('auditNiche')||'channel'; text('auditResult',`YouTube Audit Checklist for ${q}:\n✓ Channel banner professional hai?\n✓ About section me keywords hain?\n✓ Har video me strong title hai?\n✓ Thumbnail readable hai?\n✓ Description me keywords + links hain?\n✓ Tags relevant hain?\n✓ Playlist properly created hai?\n✓ Shorts + long videos mix hai?\n✓ Weekly upload schedule fixed hai?`)}
+    function genCaption(){const q=val('capTopic'); text('capResult',`✨ ${q}\n\nAgar aapko ye post useful lagi ho to save aur share zaroor karein.\n\n#${slug(q)} #reels #instagram #viral #trending #hindi`)}
+    function genFBPost(){const q=val('fbTopic'); text('fbResult',`🚨 ${q}\n\nइस खबर/जानकारी पर आपकी क्या राय है? कमेंट में जरूर बताएं।\n\n👉 ऐसी ही अपडेट के लिए पेज को Follow करें।\n\n#${slug(q)} #AajKiTazaKhabar #ViralPost #HindiNews`)}
+    function resizeImage(){
+      const file=document.getElementById('resizeFile').files[0]; const w=+val('resizeW'); const h=+val('resizeH'); const out=document.getElementById('resizeResult');
+      if(!file||!w||!h){out.innerHTML='<div class="result">Image, width aur height select karein.</div>';return}
+      const img=new Image(); img.onload=()=>{const c=document.createElement('canvas'); c.width=w;c.height=h; const ctx=c.getContext('2d'); ctx.drawImage(img,0,0,w,h); const url=c.toDataURL('image/png'); out.innerHTML=`<div class="result">Resized Image Ready</div><img style="max-width:100%;border-radius:14px;margin-top:10px" src="${url}"><a class="btn btn-primary" style="margin-top:10px" href="${url}" download="resized.png">Download</a>`}; img.src=URL.createObjectURL(file);
+    }
+    function val(id){return document.getElementById(id)?.value.trim()||''}
+    function text(id,v){document.getElementById(id).textContent=v}
+    function slug(s){return (s||'creator').toLowerCase().replace(/[^a-z0-9\u0900-\u097F]+/g,'').slice(0,30)||'creator'}
+  </script>
+</body>
+</html>
